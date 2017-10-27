@@ -1,0 +1,81 @@
+//install composer
+composer global require "laravel/installer-~1.1"
+
+//creat new project
+laravel new booksWebApp
+
+php artisan serve
+
+//create new project
+composer create-project --prefer-dist laravel/laravel booksWebApp "5.2.*"
+
+//or
+composer create-project laravel/laravel your-project-name 4.0.*
+
+//create new controller
+php artisan make:controller sectionController
+
+//or avec les methode
+php artisan make:controller ContactControlle --resource
+
+//create new model
+php artisan make:model Service
+
+//accedee au base de donnee
+php artisan tinker
+
+//retourneu le contenu d'une table in data base
+
+DB::table('users')->get();
+
+
+//migration
+
+C:\wamp\www\laravelapp>php artisan make:migration create_books_table --create="books"
+
+//cree in database
+
+C:\wamp\www\laravelapp>php artisan migrate
+
+
+//add illumunethtml pour les form
+composer require illuminate/html
+
+php artisan migrate:refresh
+//create many colone in database
+php artisan db:seed
+
+
+
+
+pour crier plusieur ligne en base de donnee en suivre le etapes suivent:
+  ->accedie au dossier database\factories\ModelFactory 
+  ->crier dans ce fichier ce fonction :
+										  $factory->define(App\Test::class, function (Faker\Generator $faker) {
+											return [
+												'nom' => $faker->name,
+												'prenom' => $faker->lastname,
+											   
+											];
+										});
+										
+  <!-- remarque : modifier les parametre selon votre bousoin  -->
+  
+  
+  ->accedie au dossier database\seeds\DatabaseSeeder :
+          dans la methode Run ajouter ce ligne :
+                                     		  factory('App\Test',1000)->create();
+											  
+					  <!-- remarque : modifier les parametre selon votre bousoin par exemple 1000 ici permtre d'ajouter 1000 ligne -->
+
+
+
+->accedié au fenetre du camande et executer ce cammande :
+                                                          php artisan db:seed
+														  
+														  
+                                                         					  
+											  
+      
+
+
