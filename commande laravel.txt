@@ -19,19 +19,19 @@ php artisan make:controller sectionController
 php artisan make:controller ContactControlle --resource
 
 //create new model
-php artisan make:model Service
+php artisan make:model Section Service
+
+
 
 //accedee au base de donnee
 php artisan tinker
 
 //retourneu le contenu d'une table in data base
-
 DB::table('users')->get();
 
 
 //migration
-
-C:\wamp\www\laravelapp>php artisan make:migration create_books_table --create="books"
+C:\wamp\www\laravelapp>php artisan make:migration create_articles_commands_relationShips_table --create="articles_commands_relationShips"
 
 //cree in database
 
@@ -78,4 +78,8 @@ pour crier plusieur ligne en base de donnee en suivre le etapes suivent:
 											  
       
 
+	  //supprimer cash
+	composer dump-autoload -o
+0651877113
 
+composer require illuminate/htm
